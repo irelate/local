@@ -18,12 +18,10 @@ GREP=/bin/grep
 PRINTF=/usr/bin/printf
 RNDC=/usr/sbin/rndc
 SED=/bin/sed
-NS[0]=75.127.96.89
-NS[1]=45.56.115.189
-NS[2]=45.56.116.224
-NS6[0]=2001:470:1f0e:8a0::2
-NS6[1]=2600:3c02::f03c:91ff:fe33:e1ba
-NS6[2]=2600:3c02::f03c:91ff:fe33:e1d9
+NS[0]=45.56.115.189
+NS[1]=45.56.116.224
+NS6[0]=2600:3c02::f03c:91ff:fe33:e1ba
+NS6[1]=2600:3c02::f03c:91ff:fe33:e1d9
 
 sed -i -e "s/dnssec-validation auto;/dnssec-validation auto; recursion yes; allow-query { any; };/" /etc/bind/named.conf.options
 sed -i -e 1,6d /etc/bind/named.conf.default-zones
